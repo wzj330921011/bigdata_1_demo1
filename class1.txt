@@ -1,0 +1,74 @@
+﻿启动redis客户端
+redis-cli 
+检查客户端与redis数据库是否连接
+ping 返回pong即连接成功
+redis数据库命令对大小写不敏感
+redis 键值数据库 key - value 
+
+redis数据结构类型：
+字符串类型（String）
+列表（List）
+有序 元素可以重复 下标：从左往右 是从0开始   从右往左 从-1开始
+集合（Set）
+无序 元素不可以重复，集合里的元素是唯一 
+散列表（Hash）
+有序集合（Sorted Set）
+位图（Bitmap）
+HyperLogLog 
+概率数据结构
+地理空间（Geospatial）
+
+字符串命令：
+set key value 
+设置键值
+
+get key
+获取指定键的值
+
+mset key value [key value]
+同时设置一个或者多个键值
+
+mget key [key……]
+同时获取多个键的值
+
+msetnx key value [key value]
+仅当数据库里不存在key时，才能 插入数据
+
+del key [key]
+删除一个或者多个键值
+
+strlen key
+返回字符串的长度
+
+getset key value
+获取key的旧值，再把值设置成value
+
+append key value
+追加字符串，如果键不存在，则创建新的键
+
+getrange key start end
+获取指定范围的字符串
+
+setrange key offset value
+修改字符串的内容，从offset开始。
+
+incr key 
+每次加1
+
+decr key
+每次减1
+
+incrby/decrby key 指定数
+增加或者减少指定数
+
+incrbyfloat key 指定数
+可以增加浮点数
+
+列表命令：
+
+lpush key value [value]
+从列表的左边插入一个或者多个元素
+
+rpush key value[value]
+从列表右边插入一个或者多个元素
+
